@@ -1,0 +1,215 @@
+:root{
+    --clr-cyan:hsl(179, 62%, 43%);
+    --clr-bright-yellow:hsl(71, 73%, 54%);
+
+    --clr-light-gray:hsl(204, 43%, 93%);
+    --clr-grayish-blue:hsl(218, 22%, 67%);
+
+    --ff-base: 'Karla', sans-serif;
+
+    --fw-base:400;
+    --fw-bold:700;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    background-color: var(--clr-light-gray);
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-base);
+    margin: auto 2rem;
+}
+
+.subscription_details{
+    background-color:white;
+    margin: auto;
+    border-radius: 5px;
+    max-width: 650px;
+    overflow: hidden;
+}
+
+.content1{
+    padding: 1.5rem;
+    margin: auto;
+}
+
+h2{
+    color: var(--clr-cyan);
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+}
+
+.subscription_guarantee{
+    color: var(--clr-bright-yellow);
+    font-weight: var(--fw-bold);
+    margin-top: 1rem;
+}
+
+.subscription_benefit{
+    font-size: 14px;
+    margin-top: 1rem;
+    line-height: 1.7rem;
+    color: var(--clr-grayish-blue);
+    font-weight: var(--fw-base);
+}
+
+.content2{
+    background-color: var(--clr-cyan);
+    padding:1.5rem;
+    margin: auto;
+}
+
+h3{
+    color: var(--clr-light-gray);
+    font-weight: var(--fw-base);
+}
+
+span{
+    font-size: 30px;
+    color:white;
+    padding-right:.8rem;
+    font-weight:var(--fw-base);
+}
+
+.access_value{
+    color:rgba(211, 211, 211, 0.699);
+    margin-top: .7rem;
+}
+
+.plan_benefit{
+    color: rgb(224, 224, 224);
+    font-weight: var(--fw-base);
+    font-size: 16px;
+}
+
+.button{
+    cursor: pointer;
+    width:16.5rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+    background-color: var(--clr-bright-yellow);
+    border-radius: 5px;
+    border:0;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.205) ;
+    color: var(--clr-light-gray);
+    font-weight: var(--fw-bold);
+}
+
+.content3{
+    background-color: hsla(179, 62%, 43%, 0.822);
+    padding: 1.5rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+h4{
+    color: rgba(224, 224, 224, 0.623);
+    font-weight: var(--fw-base);
+    font-size: 14px;
+    font-weight: var(--fw-base);
+    line-height: 1.3rem;
+}
+
+#h4{
+    margin: auto;
+    margin-top: .8rem;
+}
+
+@media(min-width:620px){
+    .flexgroup{
+        display: flex;
+    }
+    .content2{
+        margin-left:0;
+        padding: 2.5rem;
+        padding-top:3rem ;
+        padding-left: 2.5rem;
+    }
+    .content3{
+        margin-left: 0;
+        padding: 2.5rem;
+        border-bottom-left-radius: 0;
+    }
+    h4{
+        margin-right: 3.36rem;
+    }
+    .content1{
+        padding: 2.5rem;
+    }
+    h3{
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
